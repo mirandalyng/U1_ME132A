@@ -32,3 +32,32 @@ VIDEO:  Record a video where you explain how F25 works line by line. Max 3 minut
         The video must also show how you call F25 from the console.
 
 */
+
+function F25 (container){
+  for (let i = 0; i < 25; i++){
+    let gridContainer = document.querySelector (container);
+    let div = document.createElement("div");
+    
+    div.innerHTML = randomNumber(100);
+
+    gridContainer.appendChild(div);
+    
+  }
+  
+
+  function randomNumber ( max ) {
+  return Math.floor( max * Math.random() );
+}
+
+}
+
+
+
+
+
+
+// 4) Function declarations
+
+// The function below will, each time it is called,
+// return one random number, between 0 and max (0 inclusive, max exclusive)
+// Use it to solve this problem. You do not need to understand how it works.

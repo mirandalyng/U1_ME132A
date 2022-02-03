@@ -27,3 +27,14 @@ The HTML-element #grid will however be empty since we have not appended any othe
 
 */
 
+function gridMaker (gridContainer, R, C){
+    gridContainer.style.height = "500px";
+    gridContainer.style.display = "grid";
+    gridContainer.style.gridTemplateColumns = `repeat(${C}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${R}, 1fr)`;
+
+}
+
+gridMaker(document.querySelector("#grid"), 10, 2);
+
+
