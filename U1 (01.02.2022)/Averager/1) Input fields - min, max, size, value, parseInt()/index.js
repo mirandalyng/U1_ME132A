@@ -44,15 +44,26 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
 //      Log to the console the current value of #input_test_1. It should
 //      be 13, if you managed the previous E correctly.
 
+        document.querySelector("#input_test_1").value;
+        console.log(document.querySelector("#input_test_1").value);
 
 // E7:  Add a button <button> to the HTML-file.
 //      Give it the id "button_test_1"
-
+        
 
 // E8:  Add an event listener to the button so that when the user clicks on it
 //      the browser logs the current value of the input field on the console.
 //      Test this by manually changing the value of the input field. That is,
 //      by going to the webpage and changing that value.
+ 
+
+        document.querySelector("#button_test_1").addEventListener("click" ,F1, function(){
+
+            document.querySelector("#input_test_1").value;
+            console.log(document.querySelector("#input_test_1").value + 1);
+                
+        })
+
 
 
 // E9:  NOTE that the value from the input field is a string, even if the input
@@ -61,25 +72,35 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
 //      2) If you try + 1 to the value you get a concatenation (string) not an addition (number)
 //      Test both ways.
 
+        
 
 // E10: We want to transform the string "1" (for instance) into the number 1.
 //      This can be done with parseInt().
 //      So parseInt("1") will return the number 1
 //      What will be logged in the lines below?
-let a = "23";
-// console.log( parseInt( a ) + 1 );
-// console.log( a + 1 );
 
+        // let a = "1";
+        //     console.log( parseInt( a ) + 3);
+        //     console.log( a + 3 );
 
 // E11: Code a function (F1) that adds 23 to the number in the input field and
 //      logs the result to the console.
 
+
+        function F1 () {
+         console.log(parseInt(document.querySelector("#input_test_1").value) + 23);
+            
+        }
+    
+
+        F1();
 
 // E12: Now make sure that F1 is called when the user clicks on #button_test_1
 //      Test it!
 // Note (once you're done) that the previous listener (added above) is still active and working.
 // We can have several listeners for the same event on the same element.
 
+        
 
 
 //  By now, your code should log two lines:
