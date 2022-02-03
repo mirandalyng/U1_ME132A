@@ -63,6 +63,10 @@ function adder (_array) {
   return sum;
 }
 
+
+
+
+
 console.log(adder([5, 2, 1, 7]));
 console.log (adder([3, 5, 8,10]));
 console.log (adder([23, 34, 56, 1]));
