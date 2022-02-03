@@ -13,16 +13,16 @@ adder_three([2, 1, -2]) should return 1
 
 */
 
-let a1 = [1, 2, 3];
-console.log( adder_three( a1 ) ); // this logs 6 since 1 + 2 + 3 is 6
+// let a1 = [1, 2, 3];
+// console.log( adder_three( a1 ) ); // this logs 6 since 1 + 2 + 3 is 6
 
-function adder_three ( _array ) {
-  let sum = 0;
-  for ( let i = 0; i < 3; i++ ) { 
-    sum = sum + _array[i];
-  }
-  return sum;
-}
+// function adder_three ( _array ) {
+//   let sum = 0;
+//   for ( let i = 0; i < 3; i++ ) { 
+//     sum = sum + _array[i];
+//   }
+//   return sum;
+// }
 
 
 /*
@@ -51,5 +51,58 @@ VIDEO:  Make a video where you explain how adder works line by line. Max 3 minut
         This video must be called adderExplanation.
 
 */
+
+
+function adder (_array) {
+  
+  let sum = 0;
+  
+  for (let i = 0; i < _array.length; i++) {
+    sum = sum +_array[i];
+  }
+  return sum;
+}
+
+console.log(adder([5, 2, 1, 7]));
+console.log (adder([3, 5, 8,10]));
+console.log (adder([23, 34, 56, 1]));
+console.log(adder([4, 5, 70, 4, 7]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//jag har skapat en funktion som heter adder, den innhåller en parameter med namnet _array.
+//Funktionen tar emot en parameter (_array). 
+// i funktionen har jag deklarerat en variabel  som heter Sum  ,och får värdet 0 tilldelat sig. 
+//Det värdet använder jag sedan i for-loopen.
+// Funktionen innehåller en for-loop. Countern börjar på 0 och inkrementeras med i = i + 1 varje gång loopen itereras.
+//loopen itererar summan av summan (antalet celler och element i arrayen) + referensen till arrayen 
+// 
+// 
+
+
+
+
+
+
+
 
 
