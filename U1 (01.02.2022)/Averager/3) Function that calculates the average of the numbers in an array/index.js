@@ -59,7 +59,32 @@ function adder ( _array ) {
 
 function averg ( _array ) {
   
+  console.log(adder(_array)/ _array.length)
 
   // in here you must use adder
 }
+
+averg([1, 2, 3, 4, 5]);
+
+averg([5,4,6,5]);
+
+averg([5,10,20,5]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

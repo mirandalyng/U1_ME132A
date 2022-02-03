@@ -89,18 +89,6 @@ console.log(adder([4, 5, 70, 4, 7]));
 
 
 
-//jag har skapat en funktion som heter adder, den innhåller en parameter med namnet _array.
-//Funktionen tar emot en parameter (_array). 
-// i funktionen har jag deklarerat en variabel  som heter Sum  ,och får värdet 0 tilldelat sig. 
-//Det värdet använder jag sedan i for-loopen.
-// Funktionen innehåller en for-loop. Countern börjar på 0 och inkrementeras med i = i + 1 varje gång loopen itereras.
-//loopen itererar summan av summan (antalet celler och element i arrayen) + referensen till arrayen 
-// 
-// 
-
-
-
-
 
 
 
