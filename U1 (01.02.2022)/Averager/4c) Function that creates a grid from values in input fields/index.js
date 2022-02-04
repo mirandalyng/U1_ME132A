@@ -33,10 +33,15 @@ function gridMaker (gridContainer, R, C){
 
 
 document.querySelector("button").addEventListener ("click", function () {
-    let inputR = document.querySelector("#inputRows").value;
-    let inputC = document.querySelector("#inputCols").value;
-    console.log(inputR, inputC);
-    gridMaker(document.querySelector("#grid"), 10, 2);
+
+    gridMaker(
+    document.querySelector("#grid"),
+    document.querySelector("#inputRows").value,
+    document.querySelector("#inputCols").value
+    
+    
+
+    );
       
 });
 
