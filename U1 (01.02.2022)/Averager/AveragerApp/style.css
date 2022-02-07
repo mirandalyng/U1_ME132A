@@ -1,110 +1,112 @@
-
 body {
-    margin: 0px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: beige;
-    font-family: "Bebas Neue";
-    font-size: 4vh;
-    color: darkgreen;
-   
-  }
- 
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  font-family: "Bebas Neue";
+  font-size: 4vh;
+  color: darkgreen;
+}
 
-  #top > div {
-    display: flex;
-    flex-basis: 6vh;
-    margin: 2vh;
-    justify-content: center;
-    
-  }
-  
-  #top > div > div {
-    margin: 0px 2vh;
-    padding: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
+#top > div {
+  display: flex;
+  flex-basis: 6vh;
+  margin: 2vh;
+  justify-content: center;
+}
 
-  
-  
-  
-  #grid {
-    margin: 2vh;
-    padding: 1vh;
-    flex-grow: 1;
-    display: grid;
-    gap: 1vh;
-  
-   
-    background-color: beige;
-    color: darkgreen;
-   
+#top > div > div {
+  margin: 0px 2vh;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  }
-  
-  #grid > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    background-color: rgb(154, 228, 154);
-    font-family: "Bebas Neue";
-    border: solid darkgreen 1px;
-    
+#grid {
+  margin: 2vh;
+  padding: 1vh;
+  flex-grow: 1;
+  display: grid;
+  gap: 1vh;
 
-  }
-  
-  #grid > div.selected {
-    background-color: beige;
-    color: rgb(154, 228, 154)ge;
-  }
-  
-  #grid > div:hover {
-    cursor: pointer;
-    box-shadow: 0 0 10px darkgreen;
-  }
-  
-  #grid > div.selected {
-    background-color: beige;
-    color:rgb(154, 228, 154) ;
-  }
-  
-  #grid > div:hover {
-    cursor: pointer;
-    box-shadow: 0 0 10px darkgreen;
-  }
-  
-  button{
-      color: darkgreen;
-      background-color: beige;
-      border:none;
-      padding: 15px;
-      font-family: "Bebas Neue";
-      font-size: 4vh;
-      transition: background-color 0.5s ease-in-out;
-  }
+  background-color: beige;
+  color: darkgreen;
+}
 
-  button:hover{
-      background-color: darkgreen;
-      color: beige;
-      
-  }
+#grid > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  #inputCols, #inputRows{
-      height: 5vh;
-      width: 75px;
-      font-family: "Bebas Neue";
-      font-size: 4vh;
-      background-color: beige;
-      border:none;
-      border-bottom: darkgreen solid 1px;
-      color: darkgreen;
-      padding: 5px;
-      
+  background-color: rgb(154, 228, 154);
+  font-family: "Bebas Neue";
+  border: solid darkgreen 1px;
+  transition: ease-in-out 0.4s ;
+}
 
-  }
+#grid > div.selected {
+  background-color: beige;
+  color: rgb(154, 228, 154) ge;
+}
 
- 
+#grid > div:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px darkgreen;
+}
+
+#grid > div.selected {
+  background-color: beige;
+  color: rgb(123, 98, 64);
+}
+
+#grid > div:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px darkgreen;
+}
+
+button {
+  color: darkgreen;
+  background-color: beige;
+  border: none;
+  padding: 15px;
+  font-family: "Bebas Neue";
+  font-size: 4vh;
+  border:none;
+  transition: 0.5s ease-in-out;
+
+}
+
+button:hover {
+  background-color: darkgreen;
+  color: beige;
+  cursor: pointer;
+}
+
+
+
+#inputCols,
+#inputRows {
+  height: 5vh;
+  width: 75px;
+  font-family: "Bebas Neue";
+  font-size: 4vh;
+  background-color: beige;
+  border: none;
+  border-bottom: darkgreen solid 1px;
+  color: rgb(123, 98, 64);
+  padding: 5px;
+}
+
+
+#inputCols,
+#inputRows:hover{
+  cursor: pointer;
+}
+
+
+span {
+  padding-left: 10px;
+  color: rgb(123, 98, 64);
+}

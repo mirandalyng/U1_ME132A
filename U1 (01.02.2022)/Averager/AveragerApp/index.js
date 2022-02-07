@@ -4,7 +4,7 @@
 // Don't forget to include your CSS-file in the folder
 
 // Include the link to your Github Repository here:
-// Link:
+// Link: https://github.com/mirandalyng/U1_ME132A.git
 
 // GLOBAL VARIABLES
 // None allowed
@@ -84,7 +84,7 @@ function roundString(numberWithManyDecimals, decimals) {
 function updateResults(className) {
   let array = getArrayOfSelectedNumbers(className);
 
-  let selected = array.join("+");
+  let selected = array.join(" | ");
 
   let amount = array.length;
   let sum = adder(array);
@@ -117,6 +117,7 @@ document.onload = gridMaker(
   document.querySelector("#inputRows").value,
   document.querySelector("#inputCols").value
 );
+
 window.onload = gridMaker(
   document.querySelector("#grid"),
   document.querySelector("#inputRows").value,
