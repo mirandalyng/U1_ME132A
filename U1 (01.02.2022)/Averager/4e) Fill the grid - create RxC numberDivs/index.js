@@ -27,14 +27,14 @@ function gridMaker (gridContainer, R, C){
          gridContainer.style.gridTemplateColumns = `repeat(${C}, 1fr)`;
          gridContainer.style.gridTemplateRows = `repeat(${R}, 1fr)`;
 
-//         //NESTED LOOPS 
-//          for (let c = 0; c < C; c++){
+        //NESTED LOOPS 
+         for (let c = 0; c < C; c++){
 
-//                 for (let r = 0; r < R; r++){     
-//                   gridContainer.appendChild(createNumberDiv());
-//                 }
-//         }
-// 
+                for (let r = 0; r < R; r++){     
+                  gridContainer.appendChild(createNumberDiv());
+                }
+        }
+
          
 
         
