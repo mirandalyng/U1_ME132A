@@ -1,6 +1,5 @@
 "use strict";
 
-
 /*
 
 The console is quite powerful
@@ -9,10 +8,9 @@ in your JS-file from the console. Check the video.
 
 */
 
-function testConsole (p1) {
+function testConsole(p1) {
   document.querySelector("body").style.backgroundColor = p1;
 }
-
 
 /*
 
@@ -33,28 +31,20 @@ VIDEO:  Record a video where you explain how F25 works line by line. Max 3 minut
 
 */
 
-function F25 (container){
-  for (let i = 0; i < 25; i++){
-    let gridContainer = document.querySelector (container);
+function F25(container) {
+  for (let i = 0; i < 25; i++) {
+    let gridContainer = document.querySelector(container);
     let div = document.createElement("div");
-    
+
     div.innerHTML = randomNumber(100);
 
     gridContainer.appendChild(div);
-    
   }
-  
 
-  function randomNumber ( max ) {
-  return Math.floor( max * Math.random() );
+  function randomNumber(max) {
+    return Math.floor(max * Math.random());
+  }
 }
-
-}
-
-
-
-
-
 
 // 4) Function declarations
 

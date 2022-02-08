@@ -18,12 +18,11 @@ adder_three([2, 1, -2]) should return 1
 
 // function adder_three ( _array ) {
 //   let sum = 0;
-//   for ( let i = 0; i < 3; i++ ) { 
+//   for ( let i = 0; i < 3; i++ ) {
 //     sum = sum + _array[i];
 //   }
 //   return sum;
 // }
-
 
 /*
 
@@ -52,49 +51,16 @@ VIDEO:  Make a video where you explain how adder works line by line. Max 3 minut
 
 */
 
-
-function adder (_array) {
-  
+function adder(_array) {
   let sum = 0;
-  
+
   for (let i = 0; i < _array.length; i++) {
-    sum = sum +_array[i];
+    sum = sum + _array[i];
   }
   return sum;
 }
 
-
-
-
-
 console.log(adder([5, 2, 1, 7]));
-console.log (adder([3, 5, 8,10]));
-console.log (adder([23, 34, 56, 1]));
+console.log(adder([3, 5, 8, 10]));
+console.log(adder([23, 34, 56, 1]));
 console.log(adder([4, 5, 70, 4, 7]));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

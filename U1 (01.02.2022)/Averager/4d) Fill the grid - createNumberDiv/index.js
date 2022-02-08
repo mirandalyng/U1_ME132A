@@ -1,6 +1,5 @@
 "use strict";
 
-
 /*
 
 Code a function createNumberDiv that creates a div, assigns a random number (0-99)
@@ -18,19 +17,13 @@ This must append a div with a random number to the body each time it is called.
 
 */
 
+function createNumberDiv() {
+  let addDiv = document.createElement("div");
+  addDiv.innerHTML = randomNumber(100);
 
-function createNumberDiv (){
-    let addDiv = document.createElement("div");
-    addDiv.innerHTML = randomNumber(100);
-
-    return addDiv;
+  return addDiv;
 }
 
-
-
-function randomNumber ( max ) {
-    return Math.floor( max * Math.random() );
-  }
-  
-  
-
+function randomNumber(max) {
+  return Math.floor(max * Math.random());
+}

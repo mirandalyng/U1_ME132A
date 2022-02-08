@@ -23,7 +23,6 @@ average = sum of all numbers / how many numbers
 
 */
 
-
 /*
 
 From a previous exercise you have a function (adder) that returns the sum of all the elements of an array.
@@ -45,46 +44,23 @@ VIDEO:  Record a video where you explain how averg works line by line. Max 3 min
 */
 
 // Copy your earlier function here
-function adder ( _array ) {
-  
+function adder(_array) {
   let sum = 0;
-  
+
   for (let i = 0; i < _array.length; i++) {
-    sum = sum +_array[i];
+    sum = sum + _array[i];
   }
   return sum;
 }
 
-
-
-function averg ( _array ) {
-  
-  console.log(adder(_array)/ _array.length)
+function averg(_array) {
+  console.log(adder(_array) / _array.length);
 
   // in here you must use adder
 }
 
 averg([1, 2, 3, 4, 5]);
 
-averg([5,4,6,5]);
+averg([5, 4, 6, 5]);
 
-averg([5,10,20,5]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+averg([5, 10, 20, 5]);

@@ -31,14 +31,11 @@ function createNumberDiv() {
   addDiv.addEventListener("click", function () {
     addDiv.classList.toggle("selected");
 
-
-
     addDiv.addEventListener("click", updateResults("selected"));
   });
 
   return addDiv;
 }
-
 
 function getArrayOfSelectedNumbers(className) {
   let arrayElements = Array.from(document.querySelectorAll("." + className));
@@ -54,7 +51,6 @@ function getArrayOfSelectedNumbers(className) {
   return arrayNumbers;
 }
 
-
 function gridMaker(gridContainer, R, C) {
   gridContainer.style.display = "grid";
   gridContainer.style.gridTemplateColumns = `repeat(${C}, 1fr)`;
@@ -69,11 +65,9 @@ function gridMaker(gridContainer, R, C) {
   }
 }
 
-
 function randomNumber(max) {
   return Math.floor(max * Math.random());
 }
-
 
 function roundString(numberWithManyDecimals, decimals) {
   var rounded = Math.pow(10, decimals);
@@ -81,7 +75,6 @@ function roundString(numberWithManyDecimals, decimals) {
     decimals
   );
 }
-
 
 function updateResults(className) {
   let array = getArrayOfSelectedNumbers(className);

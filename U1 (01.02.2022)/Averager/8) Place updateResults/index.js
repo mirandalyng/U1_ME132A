@@ -1,6 +1,5 @@
 "use strict";
 
-
 /*
 
 By now:
@@ -26,95 +25,77 @@ VIDEO:  Record a video where you explain where you have placed all the lines
 
 */
 
-
-
-function adder (_array) {
-  
+function adder(_array) {
   let sum = 0;
-  
+
   for (let i = 0; i < _array.length; i++) {
-    sum = sum +_array[i];
+    sum = sum + _array[i];
   }
   return sum;
 }
 
-
-function averg ( _array ) {
-  
-  return adder(_array)/ _array.length;
-
-  
-  
+function averg(_array) {
+  return adder(_array) / _array.length;
 }
 
-function createNumberDiv (){
+function createNumberDiv() {
   let addDiv = document.createElement("div");
   addDiv.innerHTML = randomNumber(100);
 
-      addDiv.addEventListener("click", function() {
-      addDiv.classList.toggle("selected");
-    
-      addDiv.addEventListener("click", updateResults("selected"))
+  addDiv.addEventListener("click", function () {
+    addDiv.classList.toggle("selected");
 
-      
-      
+    addDiv.addEventListener("click", updateResults("selected"));
+  });
 
-      });
-      
   return addDiv;
 }
 
-  
-function randomNumber ( max ) {
-  return Math.floor( max * Math.random() );
+function randomNumber(max) {
+  return Math.floor(max * Math.random());
 }
 
-
-
-function gridMaker (gridContainer, R, C){
+function gridMaker(gridContainer, R, C) {
   gridContainer.style.display = "grid";
   gridContainer.style.gridTemplateColumns = `repeat(${C}, 1fr)`;
   gridContainer.style.gridTemplateRows = `repeat(${R}, 1fr)`;
 
-  gridContainer.innerHTML ="";
+  gridContainer.innerHTML = "";
 
-  for (let c = 0; c < C; c++){
-
-         for (let r = 0; r < R; r++){     
-           gridContainer.appendChild(createNumberDiv());
-         }
- }
+  for (let c = 0; c < C; c++) {
+    for (let r = 0; r < R; r++) {
+      gridContainer.appendChild(createNumberDiv());
+    }
+  }
 }
 
-
-
-document.querySelector("button").addEventListener ("click", function () {
-
-
+document.querySelector("button").addEventListener("click", function () {
   gridMaker(
+    document.querySelector("#grid"),
+    document.querySelector("#inputRows").value,
+    document.querySelector("#inputCols").value
+  );
+
+  document.querySelector("#selected>span").innerHTML = "";
+  document.querySelector("#average>span").innerHTML = "";
+  document.querySelector("#sum>span").innerHTML = "";
+  document.querySelector("#amount>span").innerHTML = "";
+});
+
+document.onload = gridMaker(
   document.querySelector("#grid"),
   document.querySelector("#inputRows").value,
   document.querySelector("#inputCols").value
-  
+);
+window.onload = gridMaker(
+  document.querySelector("#grid"),
+  document.querySelector("#inputRows").value,
+  document.querySelector("#inputCols").value
+);
 
-  );
-
-    document.querySelector("#selected>span").innerHTML = "";
-    document.querySelector("#average>span").innerHTML = "";
-    document.querySelector("#sum>span").innerHTML = "";
-    document.querySelector("#amount>span").innerHTML = "";
-    
-});
-
-
-document.onload = gridMaker(document.querySelector("#grid"), document.querySelector("#inputRows").value, document.querySelector("#inputCols").value);
-window.onload = gridMaker(document.querySelector("#grid"), document.querySelector("#inputRows").value, document.querySelector("#inputCols").value);
-
-
-function getArrayOfSelectedNumbers (className) {
-
-  // This weird line creates an array with all the numberDivs that have the 
-  // class className. Naturally, when you call this function, you will need 
+function getArrayOfSelectedNumbers(className) {
+  // This weird line creates an array with all the numberDivs that have the
+  // class className. Naturally, when you call this function, you will need
   // to assign a value to className. What value should that be, do you think?
   // The reference to the array is stored in arrayElements
   let arrayElements = Array.from(document.querySelectorAll("." + className));
@@ -133,9 +114,7 @@ function getArrayOfSelectedNumbers (className) {
 
   // Make the array of numbers available outside the function
   return arrayNumbers;
-
 }
-
 
 /*
 
@@ -157,36 +136,30 @@ to get an updated array of numbers.
 You must code a function updateResults that accepts parameter (className) and updates
 the results as required. The argument must be the class that selected numberDivs have.*/
 
-function updateResults (className) {
-    let array = getArrayOfSelectedNumbers(className);
+function updateResults(className) {
+  let array = getArrayOfSelectedNumbers(className);
 
-    let selected = array.join("+");
+  let selected = array.join("+");
 
-    let amount = array.length;
-    let sum = adder(array);
-    let average = roundString(averg(array), 1);
+  let amount = array.length;
+  let sum = adder(array);
+  let average = roundString(averg(array), 1);
 
-    document.querySelector("#selected span").innerHTML = selected;
-    document.querySelector("#amount span").innerHTML = amount;
-    document.querySelector("#sum span").innerHTML = sum;
-    document.querySelector("#average span").innerHTML = average;
+  document.querySelector("#selected span").innerHTML = selected;
+  document.querySelector("#amount span").innerHTML = amount;
+  document.querySelector("#sum span").innerHTML = sum;
+  document.querySelector("#average span").innerHTML = average;
 }
-
-
 
 // TEST:
 // Select a few numbers form the grid.
 // Call the function updateResults from the console to see it it works. Don't forget
 // to use the correct argument when calling it.
 
-
-
 // Note that updating the results actually is changing the HTML-content of the <spans>.
 // Check index.html to see what I mean by "<spans>".
 // Hopefully you remember by now tha twe use innerHTML to update the HTML-content of an
 // HTML-element.
-
-
 
 // Let's look at each of the results:
 
@@ -202,25 +175,15 @@ function updateResults (className) {
 //         console.log( [1,3,4,10,0,1].join(" - ") );
 //         This video must be called joinExplanation.
 
-
-
-
-
 // AMOUNT
 // This simply states the number of currently selected numbers.
 // Since we have them in an array, it's easy to get their amount... do you
 // remember how can we know how many elements an array has? Check it out in previous lectures or exercises.
 
-
-
-
 // SUM
 // At the beginning of the exercise, we coded a function that
 // takes an array as argument and returns the sum of its elements (if they are numbers).
 // This is the time to use it!
-
-
-
 
 // AVERAGE
 // At the beginning of the exercise, we coded a function that
@@ -229,13 +192,12 @@ function updateResults (className) {
 // Note that the average is often a number with a lot of decimals. Use the function roundString
 // below to always show a number that has one decimal.
 
-
 // */
 
-function roundString(numberWithManyDecimals, decimals){
+function roundString(numberWithManyDecimals, decimals) {
   // From: https://stackoverflow.com/a/12698296/2027283
   var rounded = Math.pow(10, decimals);
-  return (Math.round(numberWithManyDecimals * rounded) / rounded).toFixed(decimals);
+  return (Math.round(numberWithManyDecimals * rounded) / rounded).toFixed(
+    decimals
+  );
 }
-
-
