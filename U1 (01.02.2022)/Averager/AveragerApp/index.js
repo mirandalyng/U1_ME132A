@@ -31,6 +31,8 @@ function createNumberDiv() {
   addDiv.addEventListener("click", function () {
     addDiv.classList.toggle("selected");
 
+
+
     addDiv.addEventListener("click", updateResults("selected"));
   });
 
